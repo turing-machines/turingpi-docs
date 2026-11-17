@@ -6,12 +6,6 @@ export const siteNav = [
 	{ label: 'Help', href: 'https://turingpi.com/help/' },
 ];
 
-export const footerLinks = [
-	{ label: 'Media kit', href: 'https://turingpi.com/media-kit/' },
-	{ label: 'Privacy', href: 'https://turingpi.com/privacy-policy/' },
-	{ label: 'Terms', href: 'https://turingpi.com/terms-of-use/' },
-];
-
 export const footerSocials = [
 	{ icon: 'discord', label: 'Discord', href: 'https://discord.com/invite/uNbysyc' },
 	{ icon: 'twitter', label: 'Twitter', href: 'https://twitter.com/turingpi' },

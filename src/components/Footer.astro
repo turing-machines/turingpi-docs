@@ -1,8 +1,8 @@
 ---
-// Starlight's page footer (edit link, last updated, prev/next) plus the turingpi.com footer bar.
+// Starlight's page footer (edit link, last updated, prev/next) plus a copyright + social icons bar.
 import Default from '@astrojs/starlight/components/Footer.astro';
 import { Icon } from '@astrojs/starlight/components';
-import { footerLinks, footerSocials } from '../site';
+import { footerSocials } from '../site';
 ---
 
 <Default><slot /></Default>
@@ -16,9 +16,6 @@ import { footerLinks, footerSocials } from '../site';
 			</a>
 		))}
 	</div>
-	<nav class="links" aria-label="Legal">
-		{footerLinks.map((l) => <a href={l.href}>{l.label}</a>)}
-	</nav>
 </div>
 
 <style>
@@ -39,8 +36,7 @@ import { footerLinks, footerSocials } from '../site';
 		letter-spacing: 0.02em;
 		color: var(--sl-color-gray-3);
 	}
-	.socials,
-	.links {
+	.socials {
 		display: flex;
 		align-items: center;
 		gap: 1.5rem;
@@ -51,14 +47,5 @@ import { footerLinks, footerSocials } from '../site';
 	}
 	.socials a:hover {
 		opacity: 0.7;
-	}
-	.links a {
-		font-size: var(--sl-text-sm);
-		font-weight: 600;
-		color: var(--tp-link);
-		text-decoration: none;
-	}
-	.links a:hover {
-		text-decoration: underline;
 	}
 </style>
