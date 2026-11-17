@@ -483,6 +483,8 @@ red += ["# ReadMe changelog was dropped; send its URLs to the Turing Pi 2 overvi
         "/changelog  /docs/turing-pi2-intro  301",
         "/changelog/*  /docs/turing-pi2-intro  301",
         "/docs/turing-pi2-v25-list-of-improvements  /docs/turing-pi2-intro  301"]
+red += ["# ReadMe's sitemap lived at /sitemap.xml (it may be registered in Search Console)",
+        "/sitemap.xml  /sitemap-index.xml  301"]
 red += ["# ReadMe also served every page under its version prefix",
         "/v2.0.0/*  /:splat  301",
         "/v1.1/*  /:splat  301"]

@@ -34,6 +34,8 @@ export default defineConfig({
 				MobileMenuFooter: './src/components/MobileMenuFooter.astro',
 			},
 			expressiveCode: { styleOverrides: { borderRadius: '0.75rem' } },
+			// Canonical / og:url without .html (see the file for why).
+			routeMiddleware: './src/routeData.ts',
 			sidebar,
 			// ReadMe served /llms.txt for AI assistants; keep that working.
 			plugins: [starlightLlmsTxt({ projectName: 'Turing Pi' })],
