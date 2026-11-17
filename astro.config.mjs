@@ -4,6 +4,10 @@ import starlight from '@astrojs/starlight';
 import starlightLlmsTxt from 'starlight-llms-txt';
 import sidebar from './src/sidebar.json' with { type: 'json' };
 
+// Public repo with the page sources. Every page links to its file there ("Suggest an edit"):
+// readers without write access get a fork + pull request automatically.
+const REPO = 'https://github.com/turing-machines/turingpi-docs';
+
 export default defineConfig({
 	site: 'https://docs.turingpi.com',
 	// Keep ReadMe's URL shape exactly: /docs/<slug>, no trailing slash.
@@ -17,9 +21,10 @@ export default defineConfig({
 			logo: { light: './src/assets/logo-light.svg', dark: './src/assets/logo-dark.svg' },
 			favicon: '/favicon.png',
 			social: [
-				{ icon: 'github', label: 'GitHub', href: 'https://github.com/turing-machines' },
+				{ icon: 'github', label: 'GitHub', href: REPO },
 				{ icon: 'discord', label: 'Discord', href: 'https://discord.com/invite/uNbysyc' },
 			],
+			editLink: { baseUrl: `${REPO}/edit/main/` },
 			customCss: ['./src/styles/custom.css'],
 			sidebar,
 			// ReadMe served /llms.txt for AI assistants; keep that working.

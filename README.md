@@ -4,6 +4,9 @@ Source for **docs.turingpi.com**. Static site built with [Astro Starlight](https
 
 ## Editing
 
+Every page has a **Suggest an edit** link to its file in this repository; outside contributors get a fork and pull request (see [CONTRIBUTING.md](CONTRIBUTING.md)). The repository must stay public for that to work.
+
+
 - Pages live in `src/content/docs/docs/<slug>.md`. The file name is the URL: `turing-pi2-intro.md` → `/docs/turing-pi2-intro`.
 - Images go in `src/assets/img/` and are referenced relatively: `![](../../../assets/img/board.png)`. They are converted to WebP at build time.
 - The left menu is `src/sidebar.json`. A new page shows up there only after you add it.
@@ -34,7 +37,7 @@ When you rename or delete a page, add a line there: `/docs/old-slug  /docs/new-s
 ## Hosting
 
 Cloudflare Pages, connected to this repository: build command `npm run build`, output directory `dist`.
-Every push to `main` deploys; pull requests get a preview URL. The build runs on Cloudflare, not GitHub Actions.
+Every push to `main` deploys; branches of this repository get a preview URL. The build runs on Cloudflare, not GitHub Actions.
 
 ## Migration from ReadMe
 
