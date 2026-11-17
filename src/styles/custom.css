@@ -1,20 +1,263 @@
-/* Brand: ReadMe used #0A0A09 as the main colour and #226de8 for links. */
+/*
+ * Look of turingpi.com (theme: TuringPi-WP/assets/css/_vars.scss):
+ * Inter, near-black #161616 text, lime #DCFE8E pill buttons with a dark border,
+ * purple #8218B8 underlined links, light grey #EFEFF1 cards with large radii.
+ */
+
+/* ---------------------------------------------------------------- tokens */
 :root {
-	--sl-color-accent-low: #0e2753;
-	--sl-color-accent: #4d8df0;
-	--sl-color-accent-high: #c9dbfb;
-}
-:root[data-theme='light'] {
-	--sl-color-accent-low: #d3e2fb;
-	--sl-color-accent: #226de8;
-	--sl-color-accent-high: #0e3a85;
+	--tp-dark: #161616;
+	--tp-dark-2: #252524;
+	--tp-lime: #dcfe8e;
+	--tp-lime-2: #d3f97d;
+	--tp-card: #efeff1;
+	--tp-card-hover: #e6e6e9;
+	--tp-link: #8218b8;
+	--tp-link-hover: #5d0c85;
+	--tp-radius-card: 1.5rem;
+	--tp-radius: 1rem;
+
+	--sl-font: 'Inter Variable', Inter, Arial, sans-serif;
+	--sl-font-mono: Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace;
+	--sl-nav-height: 4.5rem;
+	--sl-nav-pad-y: 0.75rem;
+	--sl-text-h1: clamp(2rem, 1.25rem + 2.5vw, 2.75rem);
+	--sl-text-h2: clamp(1.625rem, 1.25rem + 1.25vw, 2rem);
+	--sl-text-h3: 1.5rem;
+	--sl-text-h4: 1.25rem;
+	--sl-line-height-headings: 1.15;
 }
 
+/* Dark mode (Starlight's default :root). The main site has no dark mode; keep it on-brand. */
+:root {
+	--tp-card: #252524;
+	--tp-card-hover: #2f2f2e;
+	--tp-link: #dcfe8e;
+	--tp-link-hover: #ffffff;
+
+	--sl-color-white: #ffffff;
+	--sl-color-gray-1: #f2f2f2;
+	--sl-color-gray-2: #e0e0e0;
+	--sl-color-gray-3: #bdbdbd;
+	--sl-color-gray-4: #828282;
+	--sl-color-gray-5: #4f4f4f;
+	--sl-color-gray-6: #2b2b2a;
+	--sl-color-black: #161616;
+	--sl-color-accent-low: #33401a;
+	--sl-color-accent: #dcfe8e;
+	--sl-color-accent-high: #dcfe8e;
+	--sl-color-text-invert: #161616;
+	--sl-color-bg-nav: #161616;
+	--sl-color-bg-sidebar: #161616;
+	--sl-color-hairline: #2b2b2a;
+	--sl-color-hairline-light: #2b2b2a;
+}
+
+:root[data-theme='light'] {
+	--tp-card: #efeff1;
+	--tp-card-hover: #e6e6e9;
+	--tp-link: #8218b8;
+	--tp-link-hover: #5d0c85;
+
+	--sl-color-white: #161616;
+	--sl-color-gray-1: #252524;
+	--sl-color-gray-2: #333333;
+	--sl-color-gray-3: #4f4f4f;
+	--sl-color-gray-4: #828282;
+	--sl-color-gray-5: #bdbdbd;
+	--sl-color-gray-6: #e0e0e0;
+	--sl-color-gray-7: #f2f2f2;
+	--sl-color-black: #ffffff;
+	--sl-color-accent-low: #f1e4fa;
+	--sl-color-accent: #8218b8;
+	--sl-color-accent-high: #5d0c85;
+	--sl-color-text: #252524;
+	--sl-color-text-accent: #8218b8;
+	--sl-color-text-invert: #161616;
+	--sl-color-bg-nav: #ffffff;
+	--sl-color-bg-sidebar: #ffffff;
+	--sl-color-bg-inline-code: #f2f2f2;
+	--sl-color-hairline: #efeff1;
+	--sl-color-hairline-light: #efeff1;
+	--sl-color-hairline-shade: #e0e0e0;
+
+	/* Callout palette from the site (light blue, lime, orange, red) */
+	--sl-color-blue-low: #e6efff;
+	--sl-color-blue: #226de8;
+	--sl-color-blue-high: #125dd7;
+	--sl-color-green-low: #f1fcd6;
+	--sl-color-green: #9ccc33;
+	--sl-color-green-high: #3c5a00;
+	--sl-color-orange-low: #fff3dc;
+	--sl-color-orange: #cf8900;
+	--sl-color-orange-high: #8a5b00;
+	--sl-color-red-low: #ffebe8;
+	--sl-color-red: #d95335;
+	--sl-color-red-high: #ab1010;
+	--sl-color-purple-low: #f1e4fa;
+	--sl-color-purple: #8c40ed;
+	--sl-color-purple-high: #5d0c85;
+}
+
+/* ------------------------------------------------------------ typography */
+.sl-markdown-content :is(h1, h2, h3, h4, h5, h6),
+h1#_top,
+.hero h1 {
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	color: var(--sl-color-white);
+}
+.sl-markdown-content a:not(:where(.not-content *)) {
+	color: var(--tp-link);
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.15em;
+}
+.sl-markdown-content a:not(:where(.not-content *)):hover {
+	color: var(--tp-link-hover);
+}
+.sl-markdown-content code:not(:where(.not-content *, pre *)) {
+	border-radius: 0.375rem;
+	padding: 0.1em 0.35em;
+}
+
+/* --------------------------------------------------------------- header */
+header.header {
+	border-bottom-color: var(--sl-color-hairline);
+}
+.site-title img {
+	height: 3rem;
+}
+site-search button[data-open-modal] {
+	border-radius: 100px;
+	border-color: transparent;
+	background-color: var(--sl-color-gray-7, var(--tp-card));
+}
+:root:not([data-theme='light']) site-search button[data-open-modal] {
+	background-color: var(--tp-card);
+}
+site-search button[data-open-modal]:hover {
+	border-color: var(--sl-color-gray-5);
+}
+/* Header icons are near-black on turingpi.com, not the link colour. */
+.header .social-icons a {
+	color: var(--sl-color-white);
+}
+.header .social-icons a:hover {
+	opacity: 0.7;
+}
+
+/* -------------------------------------------------------------- sidebar */
+#starlight__sidebar a {
+	border-radius: 100px;
+	padding-inline: 0.75rem;
+}
+#starlight__sidebar a[aria-current='page'],
+#starlight__sidebar a[aria-current='page']:hover,
+#starlight__sidebar a[aria-current='page']:focus {
+	background-color: var(--tp-lime);
+	color: var(--tp-dark);
+	font-weight: 600;
+}
+#starlight__sidebar .group-label .large {
+	font-weight: 700;
+	color: var(--sl-color-white);
+}
+
+/* ------------------------------------------------------ buttons & cards */
+.sl-link-button {
+	border-radius: 200px;
+	text-transform: uppercase;
+	font-size: 0.8125rem;
+	font-weight: 700;
+	letter-spacing: 0.2px;
+	padding: 0.95rem 1.6rem;
+	border: 2px solid var(--tp-dark);
+}
+.sl-link-button.primary {
+	background-color: var(--tp-lime);
+	color: var(--tp-dark);
+}
+.sl-link-button.primary:hover {
+	background-color: var(--tp-lime-2);
+}
+.sl-link-button:is(.secondary, .minimal) {
+	background-color: transparent;
+	color: var(--sl-color-white);
+	border: 1px solid var(--sl-color-white);
+}
+:root:not([data-theme='light']) .sl-link-button.primary {
+	border-color: var(--tp-lime);
+}
+
+.sl-link-card {
+	border: 0;
+	border-radius: var(--tp-radius-card);
+	background-color: var(--tp-card);
+	box-shadow: none;
+	padding: 1.5rem 1.75rem;
+}
+.sl-link-card:hover {
+	background-color: var(--tp-card-hover);
+	box-shadow: none;
+}
+.sl-link-card .title {
+	font-weight: 700;
+	font-size: var(--sl-text-xl);
+	letter-spacing: -0.01em;
+}
+
+.pagination-links a {
+	border-radius: var(--tp-radius);
+	box-shadow: none;
+	border-color: var(--sl-color-gray-6);
+}
+.pagination-links a:hover {
+	border-color: var(--sl-color-white);
+}
+
+/* ------------------------------------------------------------- callouts */
+.starlight-aside {
+	border: 0;
+	border-radius: var(--tp-radius);
+	padding: 1rem 1.25rem;
+}
+.starlight-aside__title {
+	font-weight: 700;
+}
+
+/* --------------------------------------------------------------- landing */
+/* Centred like turingpi.com/help (Starlight left-aligns the hero from 50rem up). */
+.hero {
+	grid-template-columns: 1fr;
+	justify-items: center;
+	padding-block: 4rem 3rem;
+}
+.hero .stack {
+	text-align: center;
+}
+.hero .copy {
+	align-items: center;
+}
+.hero h1 {
+	font-size: clamp(2.75rem, 6vw, 4.5rem);
+	line-height: 1.05;
+}
+.hero .tagline {
+	color: var(--sl-color-gray-3);
+	font-size: var(--sl-text-xl);
+	max-width: 36rem;
+	margin-inline: auto;
+}
+.hero .actions {
+	justify-content: center;
+}
+
+/* ------------------------------------------------- imported ReadMe content */
 /* ReadMe centred every image. */
 .sl-markdown-content img {
 	display: block;
 	margin-inline: auto;
-	border-radius: 0.375rem;
+	border-radius: var(--tp-radius);
 }
 .sl-markdown-content .img-caption {
 	text-align: center;
@@ -24,7 +267,7 @@
 }
 .sl-markdown-content .lead {
 	font-size: var(--sl-text-lg);
-	color: var(--sl-color-gray-2);
+	color: var(--sl-color-gray-3);
 }
 
 /* Side-by-side photos (ReadMe pages used 49% width pairs). */
@@ -48,8 +291,7 @@
 .sl-markdown-content thead:not(:has(th:not(:empty))) {
 	display: none;
 }
-
-/* ReadMe header used the near-black brand colour, not the link blue. */
-.site-title {
+.sl-markdown-content th {
+	font-weight: 700;
 	color: var(--sl-color-white);
 }

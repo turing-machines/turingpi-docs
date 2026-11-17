@@ -49,4 +49,4 @@ python3 -I scripts/readme_export.py /tmp/readme-export /tmp/readme-img
 python3 -I scripts/readme_import.py /tmp/readme-export /tmp/readme-img .
 ```
 
-The import overwrites `src/content/docs/{docs,page,changelog}`, `src/assets/img`, `src/sidebar.json` and `public/_redirects`. Once edits happen here, do not run it again.
+The import overwrites `src/content/docs/{docs,page}`, `src/assets/img`, `src/sidebar.json` and `public/_redirects`. Once edits happen here, do not run it again.

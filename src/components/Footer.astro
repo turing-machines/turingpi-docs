@@ -1,0 +1,64 @@
+---
+// Starlight's page footer (edit link, last updated, prev/next) plus the turingpi.com footer bar.
+import Default from '@astrojs/starlight/components/Footer.astro';
+import { Icon } from '@astrojs/starlight/components';
+import { footerLinks, footerSocials } from '../site';
+---
+
+<Default><slot /></Default>
+
+<div class="site-footer print:hidden">
+	<p class="copy">© Turing Machines Inc.</p>
+	<div class="socials">
+		{footerSocials.map((s) => (
+			<a href={s.href} aria-label={s.label} rel="me">
+				<Icon name={s.icon} size="1.25rem" />
+			</a>
+		))}
+	</div>
+	<nav class="links" aria-label="Legal">
+		{footerLinks.map((l) => <a href={l.href}>{l.label}</a>)}
+	</nav>
+</div>
+
+<style>
+	.site-footer {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem 2rem;
+		margin-top: 3rem;
+		padding-top: 1.5rem;
+		border-top: 1px solid var(--sl-color-hairline);
+	}
+	.copy {
+		margin: 0;
+		font-size: var(--sl-text-xs);
+		text-transform: uppercase;
+		letter-spacing: 0.02em;
+		color: var(--sl-color-gray-3);
+	}
+	.socials,
+	.links {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+	}
+	.socials a {
+		display: flex;
+		color: var(--sl-color-white);
+	}
+	.socials a:hover {
+		opacity: 0.7;
+	}
+	.links a {
+		font-size: var(--sl-text-sm);
+		font-weight: 600;
+		color: var(--tp-link);
+		text-decoration: none;
+	}
+	.links a:hover {
+		text-decoration: underline;
+	}
+</style>

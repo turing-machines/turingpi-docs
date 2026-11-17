@@ -25,7 +25,10 @@
 /docs/turing-rk1-flashing-firmware  /docs/turing-rk1-flashing-os  301
 /docs/turing-rk1-installing-os-1  /docs/turing-rk1-flashing-os  301
 /docs/usage  /docs/tpi-usage  301
-/docs/turing-pi2-v25-list-of-improvements  /changelog/turing-pi2-v25-list-of-improvements  301
+# ReadMe changelog was dropped; send its URLs to the Turing Pi 2 overview
+/changelog  /docs/turing-pi2-intro  301
+/changelog/*  /docs/turing-pi2-intro  301
+/docs/turing-pi2-v25-list-of-improvements  /docs/turing-pi2-intro  301
 # ReadMe also served every page under its version prefix
 /v2.0.0/*  /:splat  301
 /v1.1/*  /:splat  301

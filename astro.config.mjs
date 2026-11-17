@@ -18,14 +18,22 @@ export default defineConfig({
 			title: 'Turing Pi Docs',
 			description:
 				'Guides and documentation for Turing Pi 2, Turing RK1 and supported compute modules: hardware setup, BMC, flashing OS, Kubernetes and more.',
-			logo: { light: './src/assets/logo-light.svg', dark: './src/assets/logo-dark.svg' },
+			// Logo only, like the turingpi.com header; the title stays for <title> and screen readers.
+			logo: { light: './src/assets/logo-light.svg', dark: './src/assets/logo-dark.svg', replacesTitle: true },
 			favicon: '/favicon.png',
 			social: [
 				{ icon: 'github', label: 'GitHub', href: REPO },
 				{ icon: 'discord', label: 'Discord', href: 'https://discord.com/invite/uNbysyc' },
 			],
 			editLink: { baseUrl: `${REPO}/edit/main/` },
-			customCss: ['./src/styles/custom.css'],
+			customCss: ['@fontsource-variable/inter', './src/styles/custom.css'],
+			// Header, footer and mobile menu carry the turingpi.com menu and footer links.
+			components: {
+				Header: './src/components/Header.astro',
+				Footer: './src/components/Footer.astro',
+				MobileMenuFooter: './src/components/MobileMenuFooter.astro',
+			},
+			expressiveCode: { styleOverrides: { borderRadius: '0.75rem' } },
 			sidebar,
 			// ReadMe served /llms.txt for AI assistants; keep that working.
 			plugins: [starlightLlmsTxt({ projectName: 'Turing Pi' })],

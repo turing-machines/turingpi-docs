@@ -1,0 +1,33 @@
+---
+// Mobile menu: the turingpi.com main menu above Starlight's social icons and theme switch.
+import Default from '@astrojs/starlight/components/MobileMenuFooter.astro';
+import { siteNav } from '../site';
+---
+
+<nav class="mobile-site-nav" aria-label="Turing Pi">
+	{siteNav.map((l) => (
+		<a href={l.href} class:list={{ current: l.current }} aria-current={l.current ? 'true' : undefined}>
+			{l.label}
+		</a>
+	))}
+</nav>
+<Default />
+
+<style>
+	.mobile-site-nav {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem 1.5rem;
+		padding-block: 1rem;
+		border-top: 1px solid var(--sl-color-hairline);
+	}
+	.mobile-site-nav a {
+		font-weight: 500;
+		color: var(--sl-color-white);
+		text-decoration: none;
+		text-underline-offset: 0.35em;
+	}
+	.mobile-site-nav a.current {
+		text-decoration-line: underline;
+	}
+</style>
