@@ -1,0 +1,28 @@
+---
+title: Turing Pi Documentation
+description: Guides and documentation for Turing Pi 2, Turing RK1 and supported compute modules — hardware setup, BMC, flashing OS, Kubernetes and more.
+template: splash
+hero:
+  tagline: Guides and documentation to help you start working with Turing Pi as quickly as possible.
+  actions:
+    - text: Get started
+      link: /docs/turing-pi2-intro
+      icon: right-arrow
+    - text: BMC firmware
+      link: /docs/turing-pi2-bmc-intro-specs
+      variant: minimal
+---
+
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+<CardGrid>
+	<LinkCard title="Turing Pi 2" href="/docs/turing-pi2-intro" description="Specs, I/O ports, hardware installation and power." />
+	<LinkCard title="BMC" href="/docs/turing-pi2-bmc-intro-specs" description="Board management controller: UI, firmware upgrades, API." />
+	<LinkCard title="tpi CLI" href="/docs/tpi-overview" description="Control the board and flash nodes from the command line." />
+	<LinkCard title="Turing RK1" href="/docs/turing-rk1-specs-and-io-ports" description="Specs, heatsink, flashing OS and the NPU." />
+	<LinkCard title="Nvidia Jetson" href="/docs/nvidia-jetson-orin-nx-intro-specs" description="Orin NX / Nano and Nano (B01) modules." />
+	<LinkCard title="Raspberry Pi CM4" href="/docs/raspberry-pi-cm4-intro-specs" description="Module installation and flashing OS." />
+	<LinkCard title="Kubernetes" href="/docs/how-to-plan-kubernetes-installation" description="Build a K3s cluster: network, storage, Argo CD." />
+	<LinkCard title="Docker Swarm" href="/docs/docker-swarm-cluster-plan" description="Swarm cluster with keepalived, GlusterFS and Portainer." />
+	<LinkCard title="Turing Pi 1" href="/docs/turing-pi1-intro-specs" description="Documentation for the original Turing Pi board." />
+</CardGrid>

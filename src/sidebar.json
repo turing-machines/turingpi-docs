@@ -1,0 +1,342 @@
+[
+  {
+    "label": "Turing Pi 2",
+    "items": [
+      {
+        "label": "Intro & Specs",
+        "collapsed": true,
+        "items": [
+          {
+            "label": "Overview",
+            "link": "/docs/turing-pi2-intro"
+          },
+          {
+            "label": "Specs and I/O Ports",
+            "link": "/docs/turing-pi2-specs-and-io-ports"
+          },
+          {
+            "label": "Compute modules",
+            "link": "/docs/turing-pi2-supported-compute-modules"
+          },
+          {
+            "label": "Case & Cooling",
+            "link": "/docs/turing-pi2-specs-and-io-ports-case-and-cooling"
+          }
+        ]
+      },
+      {
+        "label": "Getting Started",
+        "collapsed": true,
+        "items": [
+          {
+            "label": "Hardware installation",
+            "link": "/docs/turing-pi2-hardware-installation"
+          },
+          {
+            "label": "Power",
+            "link": "/docs/turing-pi2-powering-on-the-device"
+          },
+          {
+            "label": "First Steps",
+            "link": "/docs/turing-pi2-installing-os"
+          }
+        ]
+      },
+      {
+        "label": "BMC",
+        "collapsed": true,
+        "items": [
+          {
+            "label": "Intro & Specs",
+            "link": "/docs/turing-pi2-bmc-intro-specs"
+          },
+          {
+            "label": "BMC User Interface",
+            "link": "/docs/turing-pi2-bmc-ui"
+          },
+          {
+            "label": "Firmware upgrade",
+            "link": "/docs/turing-pi2-bmc-firmware-upgrade"
+          },
+          {
+            "label": "Upgrade v2.x to v2.x",
+            "link": "/docs/turing-pi2-bmc-v2x-to-v2x"
+          },
+          {
+            "label": "Upgrade v1.x to v2.x",
+            "link": "/docs/turing-pi2-bmc-v1x-to-v2x"
+          },
+          {
+            "label": "V2.1 network migration",
+            "link": "/docs/v20-to-v21-migration"
+          },
+          {
+            "label": "Run from SD",
+            "link": "/docs/turing-pi2-bmc-run-from-sd"
+          },
+          {
+            "label": "Failsafe boot",
+            "link": "/docs/turing-pi2-bmc-failsafe-boot"
+          },
+          {
+            "label": "How To's",
+            "link": "/docs/turing-pi2-bmc-how-tos"
+          },
+          {
+            "label": "Connect to the BMC",
+            "link": "/docs/turing-pi2-bmc-how-to-get-started"
+          },
+          {
+            "label": "BMC SD Card",
+            "link": "/docs/turing-pi2-bmc-sd-card"
+          }
+        ]
+      },
+      {
+        "label": "TPI",
+        "collapsed": true,
+        "items": [
+          {
+            "label": "Overview",
+            "link": "/docs/tpi-overview"
+          },
+          {
+            "label": "Installation",
+            "link": "/docs/tpi-installation"
+          },
+          {
+            "label": "Usage",
+            "link": "/docs/tpi-usage"
+          },
+          {
+            "label": "UART",
+            "link": "/docs/tpi-uart"
+          },
+          {
+            "label": "Accessing nodes' filesystems",
+            "link": "/docs/tpi-accessing-nodes-filesystems"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Turing RK1",
+    "items": [
+      {
+        "label": "Intro & Specs",
+        "link": "/docs/turing-rk1-specs-and-io-ports"
+      },
+      {
+        "label": "Mounting Heatsink",
+        "link": "/docs/mounting-heatsink"
+      },
+      {
+        "label": "Flashing OS",
+        "link": "/docs/turing-rk1-flashing-os"
+      },
+      {
+        "label": "NPU",
+        "link": "/docs/turing-rk1-neural-processing-unit-npu"
+      }
+    ]
+  },
+  {
+    "label": "Nvidia Jetson",
+    "items": [
+      {
+        "label": "Orin NX / Nano",
+        "collapsed": true,
+        "items": [
+          {
+            "label": "Intro & Specs",
+            "link": "/docs/nvidia-jetson-orin-nx-intro-specs"
+          },
+          {
+            "label": "VMWare Player",
+            "link": "/docs/nvidia-jetson-orin-nx-vmware-player-installation-and-preparation"
+          },
+          {
+            "label": "Ubuntu 20.04 LTS",
+            "link": "/docs/nvidia-jetson-orin-nx-ubuntu-2004-lts-installation"
+          },
+          {
+            "label": "Flashing OS",
+            "link": "/docs/orin-nxnano-flashing-os"
+          },
+          {
+            "label": "Cooling",
+            "link": "/docs/nvidia-jteson-orin-nxnano-cooling"
+          },
+          {
+            "label": "Peripherals",
+            "link": "/docs/nvidia-jetson-orin-nxnano-peripherals"
+          },
+          {
+            "label": "JetPack & ML",
+            "link": "/docs/orin-nxnano-configuring-installing-jetpack-and-other-machine-learning-software-testing"
+          }
+        ]
+      },
+      {
+        "label": "Nano (B01)",
+        "collapsed": true,
+        "items": [
+          {
+            "label": "Intro & Specs",
+            "link": "/docs/nvidia-jetson-nano-intro-specs"
+          },
+          {
+            "label": "Flashing OS",
+            "link": "/docs/nvidia-jetson-nano-flashing-os"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Raspberry Pi",
+    "items": [
+      {
+        "label": "Intro & Specs",
+        "link": "/docs/raspberry-pi-cm4-intro-specs"
+      },
+      {
+        "label": "Module Installation",
+        "link": "/docs/installing-raspberry-pi-cm4-onto-a-turing-pi-2-cluster-board"
+      },
+      {
+        "label": "Flashing OS",
+        "link": "/docs/raspberry-pi-cm4-flashing-os"
+      }
+    ]
+  },
+  {
+    "label": "Advanced Topics",
+    "items": [
+      {
+        "label": "Kubernetes",
+        "collapsed": true,
+        "items": [
+          {
+            "label": "The Plan",
+            "link": "/docs/how-to-plan-kubernetes-installation"
+          },
+          {
+            "label": "OS Setup",
+            "link": "/docs/turing-pi2-kubernetes-os-setup"
+          },
+          {
+            "label": "Kubernetes Installation",
+            "link": "/docs/turing-pi2-kubernetes-installation"
+          },
+          {
+            "label": "Helm and Arkade",
+            "link": "/docs/turing-pi2-kubernetes-cluster-helm-and-arkade"
+          },
+          {
+            "label": "Network Configuration",
+            "link": "/docs/turing-pi2-kubernetes-network-configuration"
+          },
+          {
+            "label": "Storage",
+            "link": "/docs/turing-pi2-kubernetes-cluster-storage"
+          },
+          {
+            "label": "Argo CD",
+            "link": "/docs/turing-pi2-kubernetes-cluster-argo-cd"
+          },
+          {
+            "label": "Sample app deployment",
+            "link": "/docs/turing-pi2-kubernetes-cluster-sample-app-deployment"
+          },
+          {
+            "label": "Nvidia Jetson",
+            "link": "/docs/turing-pi2-kubernetes-cluster-nvidia-jetson"
+          }
+        ]
+      },
+      {
+        "label": "Docker Swarm",
+        "collapsed": true,
+        "items": [
+          {
+            "label": "The Plan",
+            "link": "/docs/docker-swarm-cluster-plan"
+          },
+          {
+            "label": "Setup OS",
+            "link": "/docs/docker-swarm-setup-os"
+          },
+          {
+            "label": "Deploy",
+            "link": "/docs/deploy"
+          },
+          {
+            "label": "Network: keepalived",
+            "link": "/docs/docker-swarm-network-keepalived"
+          },
+          {
+            "label": "Storage: GlusterFS",
+            "link": "/docs/docker-swarm-storage-glusterfs"
+          },
+          {
+            "label": "Portainer",
+            "link": "/docs/docker-swarm-portainer"
+          }
+        ]
+      },
+      {
+        "label": "BMC API",
+        "link": "/docs/turing-pi2-bmc-api"
+      },
+      {
+        "label": "Automating Node and USB Settings",
+        "link": "/docs/turing-pi2-automating-node-and-usb-settings"
+      }
+    ]
+  },
+  {
+    "label": "Turing Pi 1",
+    "items": [
+      {
+        "label": "Intro & Specs",
+        "link": "/docs/turing-pi1-intro-specs"
+      },
+      {
+        "label": "Getting Started",
+        "collapsed": true,
+        "items": [
+          {
+            "label": "Power supply",
+            "link": "/docs/turing-pi1-power-supply"
+          },
+          {
+            "label": "Heatsink",
+            "link": "/docs/turing-pi1-heatsink"
+          },
+          {
+            "label": "Compute Modules",
+            "link": "/docs/turing-pi1-compute-modules"
+          },
+          {
+            "label": "Flashing compute modules",
+            "link": "/docs/turing-pi1-flashing-compute-modules"
+          },
+          {
+            "label": "Cluster Management Bus (i2c)",
+            "link": "/docs/turing-pi1-cluster-management-bus-i2c"
+          },
+          {
+            "label": "Mini ITX case",
+            "link": "/docs/turing-pi1-mini-itx-case"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Changelog",
+    "link": "/changelog"
+  }
+]
