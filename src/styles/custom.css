@@ -28,12 +28,13 @@
 	--sl-line-height-headings: 1.15;
 }
 
-/* Dark mode (Starlight's default :root). The main site has no dark mode; keep it on-brand. */
+/* Dark mode (Starlight's default :root). The main site has no dark mode; same rules: lime only on buttons, links purple. */
 :root {
 	--tp-card: #252524;
 	--tp-card-hover: #2f2f2e;
-	--tp-link: #dcfe8e;
-	--tp-link-hover: #ffffff;
+	--tp-selected: #333333;
+	--tp-link: #c9a3f7;
+	--tp-link-hover: #e3cffb;
 
 	--sl-color-white: #ffffff;
 	--sl-color-gray-1: #f2f2f2;
@@ -43,9 +44,9 @@
 	--sl-color-gray-5: #4f4f4f;
 	--sl-color-gray-6: #2b2b2a;
 	--sl-color-black: #161616;
-	--sl-color-accent-low: #33401a;
-	--sl-color-accent: #dcfe8e;
-	--sl-color-accent-high: #dcfe8e;
+	--sl-color-accent-low: #2d1840;
+	--sl-color-accent: #b47cf0;
+	--sl-color-accent-high: #c9a3f7;
 	--sl-color-text-invert: #161616;
 	--sl-color-bg-nav: #161616;
 	--sl-color-bg-sidebar: #161616;
@@ -56,6 +57,7 @@
 :root[data-theme='light'] {
 	--tp-card: #efeff1;
 	--tp-card-hover: #e6e6e9;
+	--tp-selected: #e8e8eb;
 	--tp-link: #8218b8;
 	--tp-link-hover: #5d0c85;
 
@@ -151,11 +153,19 @@ site-search button[data-open-modal]:hover {
 	border-radius: 100px;
 	padding-inline: 0.75rem;
 }
+/* Current page: neutral grey pill. Lime is reserved for buttons. */
 #starlight__sidebar a[aria-current='page'],
 #starlight__sidebar a[aria-current='page']:hover,
 #starlight__sidebar a[aria-current='page']:focus {
-	background-color: var(--tp-lime);
-	color: var(--tp-dark);
+	background-color: var(--tp-selected);
+	color: var(--sl-color-white);
+	font-weight: 600;
+}
+/* "On this page": current heading in strong text, not an accent colour. */
+starlight-toc a[aria-current='true'],
+starlight-toc a[aria-current='true']:hover,
+mobile-starlight-toc a[aria-current='true'] {
+	color: var(--sl-color-white);
 	font-weight: 600;
 }
 #starlight__sidebar .group-label .large {
